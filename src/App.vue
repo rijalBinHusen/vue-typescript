@@ -1,21 +1,19 @@
 <template>
   <div class="app">
-    <p>{{ jobs[0].location }}</p>
+    <JobList :jobs="jobs" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, reactive, toRefs, ref } from 'vue';
 import Job from './types/Job'
+import JobList from './components/JobList.vue'
 
 export default defineComponent({
   name: 'App',
+  components: { JobList },
   setup() {
-    // const age = ref<number | string>(25)
-    // const name = ref('Link');
 
-    // return { age, name }
-    
     const jobs = ref<Job[]>([
       { title: 'farm worker', location: 'lon lon ranch', salary: 30000, id: '1' },
       { title: 'quarryman', location: 'death mountain', salary: 40000, id: '2' },
@@ -28,16 +26,6 @@ export default defineComponent({
     return { jobs }
 
   },
-  // methods: {
-  //   changeName(name: string) {
-  //     this.name = name
-  //     return name
-  //   },
-  //   changeAge(age: number) {
-  //     this.age = age
-  //     return age
-  //   }
-  // }
 });
 </script>
 
