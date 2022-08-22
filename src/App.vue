@@ -1,5 +1,9 @@
 <template>
-  <h1>Hello world</h1>
+  <div class="app">
+    <p>{{ name }} - {{ age }}</p>
+    <button @click="changeName('tests')">Change name</button>
+    <button @click="changeAge(30)">Change age</button>
+  </div>
 </template>
 
 <script lang="ts">
@@ -7,6 +11,22 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'App',
+  data() {
+    return {
+      name: 'link',
+      age: 25 as number
+    }
+  },
+  methods: {
+    changeName(name: string) {
+      this.name = name
+      return name
+    },
+    changeAge(age: number) {
+      this.age = age
+      return age
+    }
+  }
 });
 </script>
 
