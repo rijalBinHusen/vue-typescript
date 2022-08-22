@@ -7,15 +7,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, reactive, toRefs } from 'vue';
 
 export default defineComponent({
   name: 'App',
-  data() {
-    return {
+  setup() {
+
+    const state = reactive({
       name: 'link',
-      age: 25 as number
-    }
+      age: 25 as number,
+    })
+
+    return { ...toRefs(state)}
   },
   methods: {
     changeName(name: string) {
