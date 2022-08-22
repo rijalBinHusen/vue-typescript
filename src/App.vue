@@ -28,7 +28,7 @@ export default defineComponent({
       { title: 'flute player', location: 'the lost woods', salary: 35000, id: '3' },
       { title: 'fisherman', location: 'lake hylia', salary: 21000, id: '4' },
       { title: 'prison guard', location: 'gerudo valley', salary: 32000, id: '5' },
-      { title: 'farm worker', location: 'US', salary: 3000, id: '6'}
+      { title: 'programmer', location: 'us', salary: 115000, id: '6'}
     ])
 
     const order = ref<OrderTerm>('title')
