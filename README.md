@@ -1,5 +1,9 @@
 # hyrule-jobs
 
+## The project would look like:
+
+![resuult](@/../src/assets/Res.png)
+
 ## Project setup
 ```
 npm install
